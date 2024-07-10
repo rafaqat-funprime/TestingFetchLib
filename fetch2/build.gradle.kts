@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
 //    alias(libs.plugins.androidKsp)
     id ("maven-publish")
+
 }
 
 android {
@@ -48,6 +49,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
 // Define your Maven publication configuration
 afterEvaluate {
     publishing {
@@ -58,8 +60,8 @@ afterEvaluate {
 //                from(components.matching { it.name == "java" || it.name == "kotlin" })
 
 
-                groupId = "com.tonyodev.fetch2"
-                artifactId = "greeting"
+                groupId = "com.funprime.testingfetchlib"
+                artifactId = "fetch2"
                 version = "1.0"
             }
         }

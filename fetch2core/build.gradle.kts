@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id ("maven-publish")
 }
 
 android {
@@ -42,4 +43,22 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+
+// Define your Maven publication configuration
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                artifact(tasks.getByName("bundleReleaseAar"))
+                // Iterate over all components and include them in the publication
+//                from(components.matching { it.name == "java" || it.name == "kotlin" })
+
+
+                groupId = "com.funprime.testingfetchlib"
+                artifactId = "fetch2core"
+                version = "1.0"
+            }
+        }
+    }
 }
