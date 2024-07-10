@@ -60,7 +60,7 @@ afterEvaluate {
 //                from(components.matching { it.name == "java" || it.name == "kotlin" })
 
 
-                groupId = "com.github.rafaqat-funprime"
+                groupId = "com.github.fetch2"
                 artifactId = "fetch2"
                 version = "1.1"
             }
