@@ -55,9 +55,9 @@ afterEvaluate {
 //                from(components.matching { it.name == "java" || it.name == "kotlin" })
 
 
-                groupId = "com.funprime.testingfetchlib"
+                groupId = "com.github.rafaqat-funprime"
                 artifactId = "fetch2core"
-                version = "1.0"
+                version = "1.1"
             }
         }
     }
